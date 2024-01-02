@@ -5,6 +5,9 @@ import 'package:trinity_lecture_app/core/routes/app_router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> routes = [
-    AutoRoute(page: SplashRoute.page, initial: true),
+    AutoRoute(page: MainRoute.page, initial: true),
+    AutoRoute(page: SplashRoute.page),
+    AutoRoute(page: DummyUIMainRoute.page),
+    AutoRoute(page: TabBarRoute.page),
   ];
 }
