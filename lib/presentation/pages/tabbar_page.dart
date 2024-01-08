@@ -1,11 +1,10 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/news_card.dart';
-import 'package:trinity_lecture_app/presentation/widgets/organisms/news_vertical_card.dart';
+import 'package:trinity_lecture_app/presentation/widgets/dummy_ui/news_vertical_card.dart';
 
-import '../../core/commons/constants.dart';
-import '../widgets/molecules/platform_app_bar.dart';
-import '../widgets/organisms/ui_helper.dart';
+import 'package:trinity_lecture_app/core/commons/constants.dart';
+import 'package:trinity_lecture_app/presentation/widgets/organisms/ui_helper.dart';
 
 @RoutePage()
 class TabBarPage extends StatelessWidget {
@@ -67,12 +66,13 @@ class _TabBarExampleState extends State<TabBarExample>
             itemCount: 8,
             itemBuilder: (BuildContext context, int index) {
               return NewsCard(
-                  imgSrc: Constants.dummyImg,
-                  title: "asd",
-                  desc: "desc",
-                );
+                imgSrc: Constants.dummyImg,
+                title: "asd",
+                desc: "desc",
+              );
             },
-            separatorBuilder: (BuildContext context, int index) => UIHelper.verticalSpace(10) ,
+            separatorBuilder: (BuildContext context, int index) =>
+                UIHelper.verticalSpace(10),
           ),
           GridView.count(
             primary: false,
@@ -80,17 +80,12 @@ class _TabBarExampleState extends State<TabBarExample>
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
             crossAxisCount: 2,
-            children: <Widget>[
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-              NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc"),
-            ],
+            children: List.generate(
+              9,
+              (index) {
+                return NewsVertCard(imgSrc: Constants.dummyImg, desc: "desc");
+              },
+            ),
           ),
         ],
       ),

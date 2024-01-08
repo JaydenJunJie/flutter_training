@@ -1,3 +1,5 @@
+import 'package:trinity_lecture_app/domain/main_page/entities/main_page_list_object.dart';
+
 class Constants {
   static String apiKey = ''; // use your API key
   static String dummyImg =
@@ -13,5 +15,14 @@ class Constants {
     'fashion',
     'home',
     'business',
+  ];
+
+  static List<MainPageListObject> mainPageList = [
+    MainPageListObject('Dummy UI', 'Introducing basic flutter widget UI'),
+    MainPageListObject('Counter Example (State Management)', 'Introducting of state management using flutter_block : Level 1'),
+    MainPageListObject('Calculator Example (State Management)', 'Flutter state management using flutter_bloc to calculate simple syntax. Level: 3'),
+    MainPageListObject('News App', 'API calling using free source from NYTimes'),
+    MainPageListObject('To Do App', 'Create a to do list that saved in local storage using hydrated_block: Level 4'),
+    MainPageListObject('title', 'subtitle'),
   ];
 }

@@ -4,15 +4,15 @@ import 'package:flutter/widgets.dart';
 import 'package:trinity_lecture_app/core/routes/app_router.gr.dart';
 import 'package:trinity_lecture_app/presentation/widgets/atoms/text_theme_extension.dart';
 
-import '../../core/commons/colors_const.dart';
-import '../../core/commons/constants.dart';
-import '../widgets/molecules/action_text.dart';
-import '../widgets/molecules/chip.dart';
-import '../widgets/molecules/platform_app_bar.dart';
-import '../widgets/molecules/required_text.dart';
-import '../widgets/organisms/news_card.dart';
-import '../widgets/organisms/news_vertical_card.dart';
-import '../widgets/organisms/ui_helper.dart';
+import 'package:trinity_lecture_app/core/commons/colors_const.dart';
+import 'package:trinity_lecture_app/core/commons/constants.dart';
+import 'package:trinity_lecture_app/presentation/widgets/molecules/action_text.dart';
+import 'package:trinity_lecture_app/presentation/widgets/molecules/chip.dart';
+import 'package:trinity_lecture_app/presentation/widgets/molecules/platform_app_bar.dart';
+import 'package:trinity_lecture_app/presentation/widgets/molecules/required_text.dart';
+import 'package:trinity_lecture_app/presentation/widgets/organisms/news_card.dart';
+import 'package:trinity_lecture_app/presentation/widgets/dummy_ui/news_vertical_card.dart';
+import 'package:trinity_lecture_app/presentation/widgets/organisms/ui_helper.dart';
 
 @RoutePage()
 class DummyUIMainPage extends StatelessWidget {
