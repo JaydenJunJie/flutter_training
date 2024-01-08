@@ -8,15 +8,32 @@ import 'package:trinity_lecture_app/presentation/widgets/organisms/ui_helper.dar
 class MainListItemCard extends StatelessWidget {
   final String title;
   final String subtitle;
+  final int index;
 
   const MainListItemCard(
-      {super.key, required this.title, required this.subtitle});
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      required this.index});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.router.push(const DummyUIMainRoute());
+        switch (index) {
+          case 0:
+            context.router.push(const DummyUIMainRoute());
+            break;
+          case 1:
+            context.router.push(const CounterRoute());
+            break;
+          case 2:
+            context.router.push(const SimpleCalculatorRoute());
+            break;
+          case 3:
+            context.router.push(const InputValidationRoute());
+            break;
+        }
       },
       child: Container(
         padding: UIHelper.padding(vertical: 10, horizontal: 10),

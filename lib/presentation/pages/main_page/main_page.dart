@@ -24,6 +24,7 @@ class MainPage extends StatelessWidget {
           return MainListItemCard(
             title: "${listItem.title} $index",
             subtitle: listItem.subtitle,
+            index: index,
           );
         }).toList(),
       ),
