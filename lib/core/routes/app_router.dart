@@ -6,7 +6,6 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> routes = [
     AutoRoute(page: MainRoute.page, initial: true),
-    AutoRoute(page: SplashRoute.page),
     AutoRoute(page: DummyUIMainRoute.page),
     AutoRoute(page: TabBarRoute.page),
   ];
