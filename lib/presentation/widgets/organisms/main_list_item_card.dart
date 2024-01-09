@@ -31,6 +31,9 @@ class MainListItemCard extends StatelessWidget {
             context.router.push(const SimpleCalculatorRoute());
             break;
           case 3:
+            context.router.push(const NewsRoute());
+            break;
+          case 4:
             context.router.push(const InputValidationRoute());
             break;
         }

@@ -25,4 +25,17 @@ class Constants {
     MainPageListObject('To Do App', 'Create a to do list that saved in local storage using hydrated_block: Level 4'),
     MainPageListObject('title', 'subtitle'),
   ];
+
+  static List<String> topStoryType = [
+    "arts",
+    "automobiles",
+    "food",
+    "books/review",
+    "movies",
+    "sports",
+    "politics",
+    "fashion",
+    "home",
+    "business",
+  ];
 }
